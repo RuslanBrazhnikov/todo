@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 30,
+    "terminal.integrated.lineHeight": 1.4,
+    "editor.codeActionsOnSave": {
+
+    },
+
+}
