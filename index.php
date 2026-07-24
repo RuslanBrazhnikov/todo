@@ -1,13 +1,21 @@
 <?php
 
 //конфигурация подключения 
-require_once("./config.php");
+require_once('./config.php');
 require_once('./db.php');
 
-p($_POST);
 
-if (isset($_POST['title']) && !empty(trim())) {
+if (isset($_POST['title']) && !empty(trim($_POST['title']))) {
+  $task = R::dispense('tasks');
+  $task->title = $_POST['title'];
+  $id = R::store($task);
+  // echo 'ID ' . $id;
+}
 
+// ЗАДАЧА УДАЛИТЬ
+if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id']) && is_numeric($_GET['id'])) {
+  $task = R::load('tasks', $_GET['id']);
+  R::trash($task);
 }
 
 ?>
@@ -39,4 +47,5 @@ if (isset($_POST['title']) && !empty(trim())) {
   <?php include(ROOT . "templates/form.tpl"); ?>
 
 </body>
+
 </html>
