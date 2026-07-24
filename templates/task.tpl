@@ -1,11 +1,13 @@
+
+  
     <li class="list-group-item d-flex justify-content-between">
-      <span class="todo-item-text">Выпить кофе</span>
+      <span class="<?php echo $titleCSSclass;?>"><?php echo $task['title']; ?></span>
       <div class="btn-group">
-        <button role="button" class="btn btn-outline-dark btn-sm">
-          Важное
-        </button>
-        <button role="button" class="btn btn-outline-danger btn-sm">
-          Удалить
-        </button>
+        <?php if ($task['status'] === 'ready'): ?>
+          <button role="button" class="btn btn-outline-dark btn-sm">В работу</button>
+        <?php else: ?>
+          <button role="button" class="btn btn-outline-success btn-sm">Готово</button>
+        <?php endif; ?>
+        <button role="button" class="btn btn-outline-danger btn-sm">Удалить</button>
       </div>
     </li>

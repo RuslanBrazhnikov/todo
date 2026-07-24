@@ -1,8 +1,9 @@
   <!-- Form -->
-  <form class="d-flex">
+  <form class="d-flex" method="POST">
     <input
+      name="title"
       type="text"
       placeholder="Что необходимо сделать"
       class="form-control me-2" />
-    <button type="button" class="btn btn-primary">Добавить</button>
+    <button type="submit" class="btn btn-primary">Добавить</button>
 </form>

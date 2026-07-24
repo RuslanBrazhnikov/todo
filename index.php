@@ -1,7 +1,14 @@
 <?php
 
-//конфигурация
+//конфигурация подключения 
 require_once("./config.php");
+require_once('./db.php');
+
+p($_POST);
+
+if (isset($_POST['title']) && !empty(trim())) {
+
+}
 
 ?>
 
@@ -16,8 +23,17 @@ require_once("./config.php");
 
   <!-- List -->
   <ul class="list-group mb-3">
-    <?php include(ROOT . "templates/empty.tpl"); ?>
-    <?php include(ROOT . "templates/task.tpl"); ?>
+    <?php
+    $tasks = R::findAll('tasks');
+
+    if (empty($tasks)) {
+      include(ROOT . "templates/empty.tpl");
+    } else {
+      foreach ($tasks as $task) {
+        include(ROOT . "templates/task.tpl");
+      }
+    }
+    ?>
   </ul>
 
   <?php include(ROOT . "templates/form.tpl"); ?>
