@@ -18,13 +18,17 @@ form {
   display: inline-flex;
 }
 
-
 .done {
-  text-decoration: line-through;
-  opacity: 0.5;
+  text-decoration: line-through; /* Главное свойство — линия поверх текста */
+  color: #888; /* Дополнительно делаем текст серым */
+  opacity: 0.7; /* Можно слегка уменьшить прозрачность */
 }
 
 .main-link {
   color: #000;
   text-decoration: none;
+}
+
+.m-0 {
+  text-align: center;
 }
