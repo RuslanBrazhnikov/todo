@@ -14,8 +14,6 @@ require_once(ROOT . './tasks/get_stat.php');
 
 
 
-
-
 // ЗАДАЧА СОЗДАТЬ
 if (isset($_POST['title']) && !empty(trim($_POST['title']))) {
   task_new($_POST['title']);
@@ -28,7 +26,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])
 
 // ЗАДАЧА: ИЗМЕНЕНИЕ СТАТУСА
 if (isset($_GET['action']) && $_GET['action'] === 'changeStatus' && isset($_GET['id']) && is_numeric($_GET['id'])) {
-  // Загружаем задачу
+// Загружаем задачу
   task_change_status($_GET['id']);
 }
 
@@ -40,8 +38,6 @@ $tasks = task_get_all();
 
 // Подсчет статистики
 $statistics = get_stat($tasks);
-
-
 
 ?>
 

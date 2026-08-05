@@ -2,6 +2,8 @@ form {
   margin-bottom: 0;
 }
 
+
+
 .todo-app {
   max-width: 800px;
 }
@@ -19,16 +21,11 @@ form {
 }
 
 .done {
-  text-decoration: line-through; /* Главное свойство — линия поверх текста */
-  color: #888; /* Дополнительно делаем текст серым */
-  opacity: 0.7; /* Можно слегка уменьшить прозрачность */
+  text-decoration: line-through;
+  opacity: 0.7;
 }
 
 .main-link {
   color: #000;
   text-decoration: none;
-}
-
-.m-0 {
-  text-align: center;
 }
