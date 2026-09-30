@@ -1,5 +1,6 @@
 <?php
 
+// подключение библиотеки redbean к проекту
 require_once(ROOT . 'libs/rb-mysql.php');
 
 

@@ -1,10 +1,11 @@
 {
-    "editor.fontSize": 17,
+    "editor.fontSize": 15,
     "editor.fontLigatures": true,
     "editor.lineHeight": 30,
     "terminal.integrated.lineHeight": 1.4,
     "editor.codeActionsOnSave": {
 
     },
+    "editor.fontFamily": "MesloLGS NF",
 
 }

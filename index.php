@@ -26,11 +26,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])
 
 // ЗАДАЧА: ИЗМЕНЕНИЕ СТАТУСА
 if (isset($_GET['action']) && $_GET['action'] === 'changeStatus' && isset($_GET['id']) && is_numeric($_GET['id'])) {
-// Загружаем задачу
+  // Загружаем задачу
   task_change_status($_GET['id']);
 }
 
- 
+
 
 
 // Получение всех задач
@@ -53,7 +53,7 @@ $statistics = get_stat($tasks);
   <!-- List -->
   <ul class="list-group mb-3">
     <?php
-    
+
 
     if (empty($tasks)) {
       include(ROOT . "templates/empty.tpl");
